@@ -55,10 +55,16 @@ class DynamicArray:
         return self.next_index == self.capacity
 
     def max(self):
+        if self.next_index == 0:
+            return None
         return numpy.max(numpy.resize(self.data, self.next_index))
 
     def min(self):
+        if self.next_index == 0:
+            return None
         return numpy.min(numpy.resize(self.data, self.next_index))
 
     def sum(self):
+        if self.next_index == 0:
+            return None
         return numpy.sum(numpy.resize(self.data, self.next_index))

@@ -512,14 +512,14 @@ class TestDynamicArray(unittest.TestCase):
             a.append(val)
         self.assertEqual(60, a.sum())
 
-    # def test_max_min_sum_of_empty(self):
-    #     """
-    #     The max, min or sum of an empty dynamic array is None.
-    #     """
-    #     a = DynamicArray()
-    #     self.assertEqual(None, a.sum())
-    #     self.assertEqual(None, a.min())
-    #     self.assertEqual(None, a.max())
+    def test_max_min_sum_of_empty(self):
+        """
+        The max, min or sum of an empty dynamic array is None.
+        """
+        a = DynamicArray()
+        self.assertEqual(None, a.sum())
+        self.assertEqual(None, a.min())
+        self.assertEqual(None, a.max())
 
     # """
     # Search

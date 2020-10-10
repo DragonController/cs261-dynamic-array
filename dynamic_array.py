@@ -59,3 +59,6 @@ class DynamicArray:
 
     def min(self):
         return numpy.min(numpy.resize(self.data, self.next_index))
+
+    def sum(self):
+        return numpy.sum(numpy.resize(self.data, self.next_index))

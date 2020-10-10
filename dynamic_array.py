@@ -22,6 +22,8 @@ class DynamicArray:
         self.next_index += 1
 
     def __getitem__(self, key):
+        if key < 0:
+            raise(IndexError)
         return self.data[key]
 
     def clear(self):

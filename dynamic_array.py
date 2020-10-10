@@ -18,6 +18,9 @@ class DynamicArray:
         return self.next_index
 
     def append(self, item):
+        if self.next_index == self.capacity:
+            self.capacity += 1
+            self.data = numpy.resize(self.data, self.capacity)
         self.data[self.next_index] = item
         self.next_index += 1
 
@@ -38,17 +41,14 @@ class DynamicArray:
     def delete(self, key):
         if key < 0 or key >= self.next_index:
             raise(IndexError)
-        for index in range(key, self.next_index):
-            self.data[index] = self.data[index + 1]
+        self.data = numpy.delete(self.data, key)
         self.next_index -= 1
 
 
     def insert(self, key, item):
         if key < 0 or key > self.next_index:
             raise(IndexError)
-        for index in range(self.next_index, key, -1):
-            self.data[index] = self.data[index - 1]
-        self.data[key] = item
+        self.data = numpy.insert(self.data, key, item)
         self.next_index += 1
 
     def is_full(self):

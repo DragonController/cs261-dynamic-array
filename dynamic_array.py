@@ -3,6 +3,8 @@
 # YOUR NAME
 
 import numpy
+import math
+
 class DynamicArray:
     pass
     
@@ -73,4 +75,16 @@ class DynamicArray:
         for index in range(self.next_index):
             if self.data[index] == item:
                 return index
+        return None
+
+    def binary_search(self, item):
+        min = 0
+        max = self.next_index
+        while (min + 1 < max):
+            if self.data[math.floor((min + max) / 2)] >= item:
+                max = math.floor((min + max) / 2)
+            else:
+                min = math.floor((min + max) / 2)
+        if self.data[max] == item:
+            return max
         return None

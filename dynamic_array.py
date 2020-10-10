@@ -2,11 +2,13 @@
 # Your implementation should pass the tests in test_dynamic_array.py.
 # YOUR NAME
 
+import numpy
 class DynamicArray:
     pass
     
     def __init__(self):
         self.capacity = 10
+        self.data = numpy.array(0)
 
     def is_empty(self):
         return 1

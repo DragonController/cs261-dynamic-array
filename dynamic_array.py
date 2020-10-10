@@ -8,7 +8,7 @@ class DynamicArray:
     
     def __init__(self):
         self.capacity = 10
-        self.data = numpy.array(object)
+        self.data = numpy.full(self.capacity, object)
 
     def is_empty(self):
         return 1

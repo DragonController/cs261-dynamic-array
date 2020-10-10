@@ -20,4 +20,4 @@ class DynamicArray:
         self.data = numpy.full(1, item)
 
     def __getitem__(self, key):
-        return 42
+        return self.data[key]

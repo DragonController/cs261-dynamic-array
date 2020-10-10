@@ -68,3 +68,9 @@ class DynamicArray:
         if self.next_index == 0:
             return None
         return numpy.sum(numpy.resize(self.data, self.next_index))
+
+    def linear_search(self, item):
+        for index in range(self.next_index):
+            if self.data[index] == item:
+                return index
+        return None

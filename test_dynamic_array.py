@@ -136,7 +136,7 @@ class TestDynamicArray(unittest.TestCase):
         a = DynamicArray()
         self.assertEqual(0, a.next_index)
 
-    def test_next_index(self):
+    def test_next_index_again(self):
         """
         After appending the first value, next_index becomes 1.
         """
@@ -206,14 +206,14 @@ class TestDynamicArray(unittest.TestCase):
         self.assertTrue(a.is_empty())
         self.assertEqual(0, len(a))
 
-    # def test_len(self):
-    #     """
-    #     The length of a dynamic array is equal to the number of elements appended.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('FAKE')
-    #     a.append('FAKE')
-    #     self.assertEqual(2, len(a))
+    def test_len(self):
+        """
+        The length of a dynamic array is equal to the number of elements appended.
+        """
+        a = DynamicArray()
+        a.append('FAKE')
+        a.append('FAKE')
+        self.assertEqual(2, len(a))
 
     # """
     # Invalid indexes

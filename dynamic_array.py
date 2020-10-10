@@ -15,7 +15,7 @@ class DynamicArray:
         return self.next_index == 0
     
     def __len__(self):
-        return 0
+        return self.next_index
 
     def append(self, item):
         self.data[self.next_index] = item

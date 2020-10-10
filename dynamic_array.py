@@ -50,3 +50,6 @@ class DynamicArray:
             self.data[index] = self.data[index - 1]
         self.data[key] = item
         self.next_index += 1
+
+    def is_full(self):
+        return self.next_index == self.capacity

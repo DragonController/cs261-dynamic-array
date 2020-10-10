@@ -34,3 +34,8 @@ class DynamicArray:
             raise(IndexError)
         self.next_index -= 1
         return self.data[self.next_index]
+
+    def delete(self, key):
+        for index in range(key, self.next_index):
+            self.data[index] = self.data[index + 1]
+        self.next_index -= 1

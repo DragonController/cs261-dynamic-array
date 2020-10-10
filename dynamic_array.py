@@ -13,3 +13,9 @@ class DynamicArray:
     
     def __len__(self):
         return 0
+
+    def append(self, item):
+        return 0
+
+    def __getitem__(self, key):
+        return 42

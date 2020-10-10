@@ -17,7 +17,7 @@ class DynamicArray:
         return 0
 
     def append(self, item):
-        return 0
+        self.data = numpy.full(1, item)
 
     def __getitem__(self, key):
         return 42

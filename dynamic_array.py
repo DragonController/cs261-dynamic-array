@@ -53,3 +53,9 @@ class DynamicArray:
 
     def is_full(self):
         return self.next_index == self.capacity
+
+    def max(self):
+        return numpy.max(numpy.resize(self.data, self.next_index))
+
+    def min(self):
+        return numpy.min(numpy.resize(self.data, self.next_index))

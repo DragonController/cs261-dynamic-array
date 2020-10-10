@@ -3,4 +3,7 @@
 # YOUR NAME
 
 class DynamicArray:
-    pass    
+    pass
+    
+    def __init__(self):
+        self.capacity = 10

@@ -19,6 +19,7 @@ class DynamicArray:
 
     def append(self, item):
         self.data = numpy.full(1, item)
+        self.next_index += 1
 
     def __getitem__(self, key):
         return self.data[key]

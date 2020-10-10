@@ -7,6 +7,9 @@ class DynamicArray:
     
     def __init__(self):
         self.capacity = 10
-    
+
     def is_empty(self):
         return 1
+    
+    def __len__(self):
+        return 0

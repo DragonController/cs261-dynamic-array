@@ -22,7 +22,7 @@ class DynamicArray:
         self.next_index += 1
 
     def __getitem__(self, key):
-        if key < 0:
+        if key < 0 or key >= self.next_index:
             raise(IndexError)
         return self.data[key]
 

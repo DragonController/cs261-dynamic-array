@@ -8,7 +8,8 @@ class DynamicArray:
     
     def __init__(self):
         self.capacity = 10
-        self.data = numpy.full(self.capacity, object)
+        self.data = numpy.full(self.capacity, numpy.object)
+        self.next_index = 0
 
     def is_empty(self):
         return 1

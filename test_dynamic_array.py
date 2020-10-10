@@ -57,21 +57,21 @@ class TestDynamicArray(unittest.TestCase):
         a.append(42)
         self.assertEqual(42, a[0])
 
-    # """
-    # Appending and retrieving two values
-    # """
+    """
+    Appending and retrieving two values
+    """
 
-    # # Tip: If you haven't gotten this to pass within two minutes, comment it out
-    # # and move on.
-    # def test_append_two_values(self):
-    #     """
-    #     Two values can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(8)
-    #     a.append(6)
-    #     self.assertEqual(8, a[0])
-    #     self.assertEqual(6, a[1])
+    # Tip: If you haven't gotten this to pass within two minutes, comment it out
+    # and move on.
+    def test_append_two_values(self):
+        """
+        Two values can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append(8)
+        a.append(6)
+        self.assertEqual(8, a[0])
+        self.assertEqual(6, a[1])
 
     """
     Guiding internal data storage, with a static array
@@ -155,31 +155,31 @@ class TestDynamicArray(unittest.TestCase):
         self.assertEqual('foo', a.data[0])
         self.assertEqual('bar', a.data[1])
 
-    # # This is a copy of the same test from way up above. If this passes, uncomment
-    # # the other uncommented test. If this is confusing, just ignore this comment.
-    # def test_append_two_values_again(self):
-    #     """
-    #     Two values can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append(8)
-    #     a.append(6)
-    #     self.assertEqual(8, a[0])
-    #     self.assertEqual(6, a[1])
+    # This is a copy of the same test from way up above. If this passes, uncomment
+    # the other uncommented test. If this is confusing, just ignore this comment.
+    def test_append_two_values_again(self):
+        """
+        Two values can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append(8)
+        a.append(6)
+        self.assertEqual(8, a[0])
+        self.assertEqual(6, a[1])
 
-    # def test_append_four_values(self):
-    #     """
-    #     Three values can be appended to and retrieved from a dynamic array.
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     a.append('funk')
-    #     self.assertEqual('fee', a[0])
-    #     self.assertEqual('fi', a[1])
-    #     self.assertEqual('fo', a[2])
-    #     self.assertEqual('funk', a[3])
+    def test_append_four_values(self):
+        """
+        Three values can be appended to and retrieved from a dynamic array.
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        a.append('funk')
+        self.assertEqual('fee', a[0])
+        self.assertEqual('fi', a[1])
+        self.assertEqual('fo', a[2])
+        self.assertEqual('funk', a[3])
 
     # """
     # Emptiness, len and clearing

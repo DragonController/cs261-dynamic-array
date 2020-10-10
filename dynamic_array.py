@@ -41,3 +41,12 @@ class DynamicArray:
         for index in range(key, self.next_index):
             self.data[index] = self.data[index + 1]
         self.next_index -= 1
+
+
+    def insert(self, key, item):
+        if key < 0 or key > self.next_index:
+            raise(IndexError)
+        for index in range(self.next_index, key):
+            self.data[index] = self.data[index - 1]
+        self.data[key] = item
+        self.next_index += 1

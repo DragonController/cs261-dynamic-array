@@ -30,5 +30,7 @@ class DynamicArray:
         self.next_index = 0
 
     def pop(self):
+        if self.next_index == 0:
+            raise(IndexError)
         self.next_index -= 1
         return self.data[self.next_index]

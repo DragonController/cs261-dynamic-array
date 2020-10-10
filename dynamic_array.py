@@ -23,3 +23,7 @@ class DynamicArray:
 
     def __getitem__(self, key):
         return self.data[key]
+
+    def clear(self):
+        self.data = numpy.empty(self.capacity, dtype = 'O')
+        self.next_index = 0

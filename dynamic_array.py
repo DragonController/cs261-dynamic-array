@@ -46,7 +46,7 @@ class DynamicArray:
     def insert(self, key, item):
         if key < 0 or key > self.next_index:
             raise(IndexError)
-        for index in range(self.next_index, key):
-            self.data[index] = self.data[index - 1]
+        for index in range(key, self.next_index):
+            self.data[self.next_index - index] = self.data[self.next_index - index - 1]
         self.data[key] = item
         self.next_index += 1

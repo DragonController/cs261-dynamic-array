@@ -19,7 +19,7 @@ class DynamicArray:
 
     def append(self, item):
         if self.next_index == self.capacity:
-            self.capacity += 1
+            self.capacity *= 2
             self.data = numpy.resize(self.data, self.capacity)
         self.data[self.next_index] = item
         self.next_index += 1

@@ -83,7 +83,6 @@ class TestDynamicArray(unittest.TestCase):
         """
         import numpy as np # Hint: Get an error? Just `pip3 install numpy`
         a = DynamicArray()
-        print(np.ndarray)
         self.assertEqual(np.ndarray, type(a.data))
 
     def test_data_object_references(self):
@@ -241,21 +240,21 @@ class TestDynamicArray(unittest.TestCase):
         except IndexError:
             pass
 
-    # """
-    # Removing elements from the end
-    # """
+    """
+    Removing elements from the end
+    """
 
-    # def test_pop(self):
-    #     """
-    #     Popping removes and returns the last element
-    #     """
-    #     a = DynamicArray()
-    #     a.append('fee')
-    #     a.append('fi')
-    #     a.append('fo')
-    #     last_element = a.pop()
-    #     self.assertEqual('fo', last_element)
-    #     self.assertEqual(2, len(a))
+    def test_pop(self):
+        """
+        Popping removes and returns the last element
+        """
+        a = DynamicArray()
+        a.append('fee')
+        a.append('fi')
+        a.append('fo')
+        last_element = a.pop()
+        self.assertEqual('fo', last_element)
+        self.assertEqual(2, len(a))
 
     # def test_pop_empty(self):
     #     """

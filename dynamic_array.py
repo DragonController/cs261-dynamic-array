@@ -27,5 +27,8 @@ class DynamicArray:
         return self.data[key]
 
     def clear(self):
-        self.data = numpy.empty(self.capacity, dtype = 'O')
         self.next_index = 0
+
+    def pop(self):
+        self.next_index -= 1
+        return self.data[self.next_index]
